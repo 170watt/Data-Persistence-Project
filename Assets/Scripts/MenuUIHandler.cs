@@ -37,6 +37,25 @@ public class MenuUIHandler : MonoBehaviour
 
     public void StartNew()
     {
+        //start NEW02
+        // Check if the input is null, empty, or just spaces
+        if (string.IsNullOrWhiteSpace(NameInput.text))
+        {
+            // Optional: Give visual feedback
+            Debug.Log("Please enter a name before starting!");
+
+            // You could also change the placeholder color to red to alert the user
+            var placeholder = NameInput.placeholder as TextMeshProUGUI;
+            if (placeholder != null)
+            {
+                placeholder.color = Color.red;
+                placeholder.text = "NAME REQUIRED!";
+            }
+
+            return; // EXIT the function early so SceneManager.LoadScene(1) is never called
+        }
+        //End NEW02
+
         //NEW
         if (MainDataPersistence.Instance != null && NameInput != null)
         {
