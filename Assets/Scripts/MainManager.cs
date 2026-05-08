@@ -24,7 +24,8 @@ public class MainManager : MonoBehaviour
         // start NEW Display the best score from the persistence manager
         if (MainDataPersistence.Instance != null)
         {
-            BestScoreText.text = $"Best Score : {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
+            // BestScoreText.text = $"Best Score : {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
+            BestScoreText.text = $"Player: {MainDataPersistence.Instance.PlayerName} | Best Score: {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
         }
         //end NEW
 
