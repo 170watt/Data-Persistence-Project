@@ -95,8 +95,8 @@ public class MenuUIHandler : MonoBehaviour
             // Update Best Score Text
             if (MainDataPersistence.Instance.HighScore > 0)
             {
-                //  BestScoreText.text = $"Best Score: {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
-                BestScoreText.text = $"Player: {MainDataPersistence.Instance.PlayerName} | Best Score: {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
+                BestScoreText.text = $"Best Score: {MainDataPersistence.Instance.BestPlayerName} : {MainDataPersistence.Instance.HighScore}";
+
             }
             else
             {
